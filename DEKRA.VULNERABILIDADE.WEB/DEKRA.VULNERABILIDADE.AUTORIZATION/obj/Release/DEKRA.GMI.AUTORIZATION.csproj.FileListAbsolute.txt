@@ -1,0 +1,4 @@
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.AUTORIZATION\bin\Release\DEKRA.GMI.AUTORIZATION.dll
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.AUTORIZATION\bin\Release\DEKRA.GMI.AUTORIZATION.pdb
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.AUTORIZATION\obj\Release\DEKRA.GMI.AUTORIZATION.dll
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.AUTORIZATION\obj\Release\DEKRA.GMI.AUTORIZATION.pdb

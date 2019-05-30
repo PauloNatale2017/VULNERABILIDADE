@@ -1,0 +1,354 @@
+﻿
+@{
+    ViewBag.Title = "CreateGmuds";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Scripts.Render("~/ScriptsAngular/js")
+@Scripts.Render("~/LayoutPackages/js")
+
+@Styles.Render("~/ContentAngular/css")
+@Styles.Render("~/LayoutPackages/css")
+
+@*
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.0/angular.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.0/angular-touch.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.0/angular-animate.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/lodash.min.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/jszip.min.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/excel-builder.dist.js"></script>
+*@
+
+@*<link href="~/Content/ui-grid.css" rel="stylesheet" />
+<link href="~/Content/ui-grid.min.css" rel="stylesheet" />*@
+
+@*<script src="~/Scripts/ui-grid.core.min.js"></script>
+<script src="~/Scripts/ui-grid.tree-base.min.js"></script>
+<script src="~/Scripts/ui-grid.tree-view.min.js"></script>*@
+
+
+<script src="~/Scripts/angular-tree-control.js"></script>
+<script src="~/Scripts/angular-ui-tree.js"></script>
+
+<script src="~/Scripts/angular-ui-tree.js"></script>
+<script src="~/Scripts/angular-ui-tree.min.js"></script>
+
+@*<link href="~/Content/angular-ui-tree.css" rel="stylesheet" />
+<link href="~/Content/angular-ui-tree.min.css" rel="stylesheet" />*@
+<script src="~/Scripts/angular.treeview.js"></script>
+<script src="~/Scripts/angular.treeview.min.js"></script>
+<script src="~/Scripts/ui-grid.tree-view.min.js"></script>
+
+<script src="~/Scripts/angular-tree-control.js"></script>
+<script src="~/Scripts/context-menu.js"></script>
+<link href="~/Content/tree-control.css" rel="stylesheet" />
+<link href="~/Content/tree-control-attribute.css" rel="stylesheet" />
+<link href="~/Content/angular.treeview.css" rel="stylesheet" />
+
+<script src="~/js/Gmuds.js"></script>
+
+<style>
+     .c-ul {border: 1px solid #abcdef;}
+     .c-li {background-color: #defacb}
+     .c-liSelected {background-color: #fedbca}
+     .c-iExpanded {border: 1px solid #77a}
+     .c-iCollapsed {border: 1px solid #7c7}
+     .c-iLeaf {border: 1px solid #a77}
+     treecontrol.tree-classic li .tree-label.c-label {color: #44c}
+     treecontrol.tree-classic li .tree-selected.c-labelSelected {background-color: yellow}
+    .nav-tabs>li>a 
+    {
+       margin-right: 2px;
+       line-height: 1.428571429;
+       border: 1px solid transparent;
+       border-radius: 4px 4px 0 0;
+    }
+    .la{
+            margin-right: 2px;
+    line-height: 1.428571429;
+    border: 1px solid #008955;
+    border-radius: 4px 4px 0 0;
+   /*background-color: orange;*/
+    background-color: white;
+    color:  #008955;
+    }
+    .grid {
+  width: 500px;
+  height: 400px;
+}
+    .my-custom-menu {
+  position: relative;
+}
+    .my-custom-menu .ui-grid-menu {
+  padding: 0px;
+}
+    .my-custom-menu .ui-grid-menu-inner {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+    .rotated {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+    .col-sm-10 {
+    width: 105.333333% !important;
+}
+</style>
+
+
+<div ng-controller="CtrlGmuds" style="background-color: whitesmoke; width: 110%; float: left;  height: 800px; margin-left: -71px; margin-top: 50px; text-shadow: black 1px 3px 6px; color: #008955;z-index:999">
+   
+     <h2>GERAÇÃO DE GMUDS</h2>
+    @*<p>Geração de gmuds e controle</p>*@
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a class="la" data-toggle="tab" href="#home">GMUDS</a></li>
+        @*<li style="background-color:white">
+            <a class="la" data-toggle="tab" href="#menu1">
+                CADASTRO
+                <span style="float:left;margin-left:2px;background-color: red;" class="badge">{{TOTAL_A}}</span>
+                <span style="float:left;margin-left:2px;background-color: green;" class="badge">{{TOTAL_F}}</span>
+            </a>
+        </li>
+        <li>
+            <a class="la" data-toggle="tab" href="#menu2">
+                CADASTRO SQL
+                @*<span style="float:left;margin-left:2px;" class="badge">{{TOTAL_A}}</span>
+                    <span style="float:left;margin-left:2px;" class="badge">{{TOTAL_F}}</span>
+            </a>
+        </li>
+        <li>
+            <a class="la" data-toggle="tab" href="#menu3">
+                CADASTRO DLLS
+                <span style="float:left;margin-left:2px;" class="badge">{{TOTAL_A}}</span>
+                    <span style="float:left;margin-left:2px;" class="badge">{{TOTAL_F}}</span>
+            </a>
+        </li>
+        <li>
+            <a class="la" data-toggle="tab" href="#menu3">
+                CADASTRO VIEWS
+                @*<span style="float:left;margin-left:2px;" class="badge">{{TOTAL_A}}</span>
+                    <span style="float:left;margin-left:2px;" class="badge">{{TOTAL_F}}</span>
+            </a>
+        </li>
+        <li>
+            <a class="la" data-toggle="tab" href="#menu4">
+                CADASTRO VIEWS
+                <span style="float:left;margin-left:2px;" class="badge">{{TOTAL_A}}</span>
+                    <span style="float:left;margin-left:2px;" class="badge">{{TOTAL_F}}</span>
+            </a>
+        </li>
+        <li>
+            <a class="la" data-toggle="tab" href="#menu5">
+                CADASTRO VIEWS
+                <span style="float:left;margin-left:2px;" class="badge">{{TOTAL_A}}</span>
+                    <span style="float:left;margin-left:2px;" class="badge">{{TOTAL_F}}</span>
+            </a>
+        </li>
+        <li>
+            <a style="margin-right: 2px; line-height: 1.428571429; border: 1px solid #008955; border-radius: 4px 4px 0 0;  background-color: red;color: white;" data-toggle="tab" href="#menu6">
+                RESULTADO
+
+                <span style="float:left;margin-left:2px;" class="badge">{{TOTAL_A}}</span>
+                    <span style="float:left;margin-left:2px;" class="badge">{{TOTAL_F}}</span>
+            </a>
+        </li>*@
+    </ul>
+
+    @*//ui-grid-exporter ui-grid-selection ui-grid-grouping *@
+    <div class="tab-content">
+        <div ng-model="GMUDS" id="home" class="tab-pane fade in active" style="float: left; background-color: white; width: 100%; height: 672px;">         
+            @*<div id="gridPesquisa" ui-grid="gridPesq" ui-grid-tree-view
+                 ui-grid-selection style="width:100%;height:672px;float: left; margin-top: 15px;"></div>*@   
+
+            <treecontrol class="tree-classic"  style="float: left;
+                         background-color: whitesmoke;
+                         text-align: left;
+                         overflow: scroll;
+                         height: 700px;
+                         width: 100%;"
+                         tree-model="dataForTheTree"
+                         options="treeOptions"
+                         on-selection="showSelected(node)"
+                         selected-node="node1">
+                         {{node.id}} {{node.Ano}}{{node.Descricao}} 
+            </treecontrol>
+
+            <!-- as an attribute -->
+            @*<div treecontrol class="tree-classic"
+                 tree-model="dataForTheTree"
+                 options="treeOptions"
+                 on-selection="showSelected(node)"
+                 selected-node="node1">
+                Itens: {{ node.Itens }}
+            </div>*@  
+
+            @*<div data-angular-treeview="true"
+                 data-tree-model="dataForTheTree"
+                 data-node-id="id"
+                 data-node-label="Descricao"
+                 data-node-children="Itens">
+            </div>*@
+
+
+    </div>
+    <div id="menu1" class="tab-pane fade">
+        <div style="float: left; width: 100%;  height: 78px; background-color: white;  margin-top: 15px;display: inline-flex;">
+            <div class="form-group has-success has-feedback">
+                <label style="width: 206px;" class="col-sm-2 control-label" for="inputSuccess">SELECIONE O TIPO DE GMUDE</label>
+                <div class="col-sm-10">
+                    <select class="form-control">
+                        <option id="inputSuccess" ng-repeat="x in GmudTipe">{{x}}</option>
+                    </select>
+                    @*<input type="text" class="form-control" id="inputSuccess">*@
+                        @*<span class="glyphicon glyphicon-ok form-control-feedback"></span>*@
+                    </div>
+                </div>
+
+                <div class="form-group has-success has-feedback">
+                    <label style="width: 206px;" class="col-sm-2 control-label" for="inputSuccess">NUMERO GMUD</label>
+                    <div class="col-sm-10">
+                        @*<select ng-change="calculateServicesSubTotal(item)" ng-model="Gmud.Number" class="form-control">
+                                <option id="inputSuccess" ng-repeat="X in NUMEROGMUD" ng-model="selected">{{X}}</option>
+                            </select>*@
+
+                        <select name="NumeroGmud" id="NumeroGmud" ng-model="data.model" class="form-control">
+                            <option id="inputSuccess" ng-repeat="option in data.availableOptions" value="{{option.id}}">{{option.name}}</option>
+                        </select>
+
+                        @*<input type="text" class="form-control" id="inputSuccess">*@
+                        @*<span class="glyphicon glyphicon-ok form-control-feedback"></span>*@
+                    </div>
+                </div>
+
+                <div class="form-group has-success has-feedback">
+                    <label style="width: 206px;" class="col-sm-2 control-label" for="inputSuccess">SOLICITANTE</label>
+                    <div class="col-sm-10">
+                        <select class="form-control">
+                            <option id="inputSuccess" ng-repeat="x in SOLICITANTE">{{x}}</option>
+                        </select>
+                        @*<input type="text" class="form-control" id="inputSuccess">*@
+                        @*<span class="glyphicon glyphicon-ok form-control-feedback"></span>*@
+                    </div>
+                </div>
+
+                <div class="form-group has-success has-feedback">
+                    <label style="width: 206px;" class="col-sm-2 control-label" for="inputSuccess">DEPARTAMENTO SOLICITANTE</label>
+                    <div class="col-sm-10">
+                        <select class="form-control">
+                            <option id="inputSuccess" ng-repeat="x in DEPARTAMENTOSOLICITANTE">{{x}}</option>
+                        </select>
+                        @*<input type="text" class="form-control" id="inputSuccess">*@
+                        @*<span class="glyphicon glyphicon-ok form-control-feedback"></span>*@
+                    </div>
+                </div>
+
+                <div class="form-group has-success has-feedback">
+                    <label style="width: 206px;" class="col-sm-2 control-label" for="inputSuccess">DEPARTAMENTO SOLICITANTE</label>
+
+                    <div class="col-sm-10">
+                        <select class="form-control">
+                            <option id="inputSuccess" ng-repeat="x in DEPARTAMENTOSOLICITANTE">{{x}}</option>
+                        </select>
+                        @*<input type="text" class="form-control" id="inputSuccess">*@
+                        @*<span class="glyphicon glyphicon-ok form-control-feedback"></span>*@
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        <div style="float: left; width: 100%;  height: 78px; background-color: white;    margin-top: 15px;display: inline-flex;">
+                <div class="form-group has-success has-feedback" style="float:left;width:250px">
+                    <label style="width: 206px;" class="col-sm-2 control-label" for="inputSuccess">DATA DE CRIAÇÃO</label>
+
+                    <div class="col-sm-10">
+                        @*<select class="form-control">
+                                <option id="inputSuccess" ng-repeat="x in DEPARTAMENTOSOLICITANTE">{{x}}</option>
+                            </select>*@
+                        @*<input type="text" class="form-control" id="inputSuccess">*@
+                        @*<span class="glyphicon glyphicon-ok form-control-feedback"></span>*@
+                        <input class="form-control" type="date" name="name" value=" " />
+                    </div>
+                </div>
+                <div class="form-group has-success has-feedback" style="float:left;width:250px">
+                    <label style="width: 206px;" class="col-sm-2 control-label" for="inputSuccess">ÚLTIMA ATUALIZAÇÃO</label>
+
+                    <div class="col-sm-10">
+                        @*<select class="form-control">
+                                <option id="inputSuccess" ng-repeat="x in DEPARTAMENTOSOLICITANTE">{{x}}</option>
+                            </select>*@
+                        <input class="form-control" type="date" name="name" value=" " />
+                        @*<input type="text" class="form-control" id="inputSuccess">*@
+                        @*<span class="glyphicon glyphicon-ok form-control-feedback"></span>*@
+                    </div>
+                </div>
+                <div class="form-group has-success has-feedback" style="float:left;width:250px">
+                    <label style="width: 206px;" class="col-sm-2 control-label" for="inputSuccess">DATA PRODUÇÃO</label>
+
+                    <div class="col-sm-10">
+                        @*<select class="form-control">
+                                <option id="inputSuccess" ng-repeat="x in DEPARTAMENTOSOLICITANTE">{{x}}</option>
+                            </select>*@
+                        <input class="form-control" type="date" name="name" value=" " />
+                        @*<input type="text" class="form-control" id="inputSuccess">*@
+                        @*<span class="glyphicon glyphicon-ok form-control-feedback"></span>*@
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <hr />
+        <div style="float: left; width: 100%;  height: 74px; background-color: white;    margin-top: 15px;display: inline-flex;">
+
+                <div class="form-group has-success has-feedback" style="background-color: white; float: left; width: 100%; height: 76px;">
+                    <label style="width: 206px;" class="col-sm-2 control-label" for="inputSuccess">DESCRIÇÃO GMUD</label>
+
+                    <div class="col-sm-10">
+                        <input ng-model="Gmud.Descricao" type="text" class="form-control" id="inputSuccess" style="max-width:600px !important;width:600px;font-weight:bold !important;">
+                    </div>
+                </div>
+
+
+                <div class="form-group has-success has-feedback" style="background-color: white; float: left; width: 100%; height: 76px;">
+                    <label style="width: 206px;" class="col-sm-2 control-label" for="inputSuccess">CÓDIGO DE RASTREAMENTO</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputSuccess" style="max-width:600px !important;width:520px;" value="TI-DK-GMUD-{{data.model}}-{{Gmud.Descricao}}-">
+                    </div>
+                </div>
+
+            </div>
+            <hr />
+            <hr />
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            @*<h3>Menu 2</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>*@
+        </div>
+        <div id="menu3" class="tab-pane fade">
+            @*<h3>Menu 3</h3>
+                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>*@
+        </div>
+        <div id="menu4" class="tab-pane fade">
+            @*<h3>Menu 3</h3>
+                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>*@
+        </div>
+        <div id="menu5" class="tab-pane fade">
+            @*<h3>Menu 3</h3>
+                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>*@
+        </div>
+        <div id="menu6" class="tab-pane fade">
+            @*<h3>Menu 3</h3>
+                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>*@
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    @Scripts.Render("~/ScriptsAngular/js")
+    @Scripts.Render("~/LayoutPackages/js")
+    @Styles.Render("~/ContentAngular/css")
+    @Styles.Render("~/LayoutPackages/css")
+
+    
+    <link href="~/Content/ng-table.min.css" rel="stylesheet" />
+    <script src="~/Scripts/ng-table.min.js"></script>
+
+      
+    <script src="~/LayoutPackages/Login/js/LoginTypeScript.js"></script>
+</head>
+<body ng-app="App" style="background:url('../../img/Backgrounds/download (3).jfif');background-repeat: no-repeat; background-size: cover;">
+
+    <style type="text/css">
+        .container > header {
+            margin: 0 auto !important;
+            padding: 6em 0em !important;
+            padding-left: 19px !important;
+            background: rgba(0,0,0,0.05) !important;
+        }
+        #LogIn:hover {
+            /*color: #008955;
+                text-shadow: black 2px 4px 9px;
+                font-size: 22px;
+                font-weight: bold;*/
+            color: #008955;
+            text-shadow: #008955 4px 2px 7px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        #Acess:hover {
+            color: #008955;
+            text-shadow: #008955 5px 3px 7px;
+            font-size: 15px;
+            font-weight: bold;
+            -webkit-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+            transform: scale(1.3);
+        }
+    </style>
+   
+
+    @*style="background:url('../../img/Backgrounds/download (1).jfif');background-repeat: no-repeat; background-size: 100%;"*@
+    <div class="container" style="z-index: 2;">
+        <ul id="gn-menu" class="gn-menu-main">
+
+            @*@Html.Partial("_LoginPartial")*@
+
+            <li class="gn-trigger" style="float:left !important">
+                <a class="gn-icon gn-icon-menu">
+                    <span>Menu</span>
+                </a>
+
+                <nav class="gn-menu-wrapper">
+                    <div class="gn-scroller">
+                        <ul class="gn-menu">
+                            @*<li class="gn-search-item">
+                                <input placeholder="Search" type="search" class="gn-search">
+                                <a class="gn-icon gn-icon-search">
+                                    <span>Search</span>
+                                </a>
+                            </li>*@
+
+                             <li>
+                                @Html.ActionLink("SMARTWEB", "Vulnerabilidade", "Home", new { area = "" }, new { @class = "gn-icon gn-icon-help" })
+                             </li>
+                            @*<li>
+                                @Html.ActionLink("ROBO DEKRA CHECK", "CreateGmuds", "Home", new { area = "" }, new { @class = "gn-icon gn-icon-help" })
+                            </li>
+                            <li>
+                                @Html.ActionLink("ROBO CHECKAUTO", "CreateGmuds", "Home", new { area = "" }, new { @class = "gn-icon gn-icon-help" })
+                            </li>*@
+                                 @*<li>@Html.ActionLink("Teste UI-GRID", "GridUI", "Home", new { area = "" }, new { @class = "gn-icon gn-icon-earth" })</li>
+                                 <li>@Html.ActionLink("Cadastrar Gmud", "CreateGmuds", "Home", new { area = "" }, new { @class = "gn-icon gn-icon-cog" })</li>
+                                 <li>@Html.ActionLink("Cadastrar Gmud", "CreateGmuds", "Home", new { area = "" }, new { @class = "gn-icon gn-icon-download" })</li>
+                                 <li>@Html.ActionLink("Cadastrar Gmud", "CreateGmuds", "Home", new { area = "" }, new { @class = "gn-icon gn-icon-photoshop" })</li>
+                                 <li>@Html.ActionLink("Cadastrar Gmud", "CreateGmuds", "Home", new { area = "" }, new { @class = "gn-icon gn-icon-illustrator" })</li>
+                                 <li>@Html.ActionLink("Cadastrar Gmud", "CreateGmuds", "Home", new { area = "" }, new { @class = "gn-icon gn-icon-archive" })</li>
+                                 <li>@Html.ActionLink("Cadastrar Gmud", "CreateGmuds", "Home", new { area = "" }, new { @class = "gn-icon gn-icon-article" })</li>
+                                 <li>@Html.ActionLink("Cadastrar Gmud", "CreateGmuds", "Home", new { area = "" }, new { @class = "gn-icon gn-icon-pictures" })</li>
+                              <li>@Html.ActionLink("Gmuds", "CreateGmuds", "Home", new { area = "" }, new { @class = "gn-icon gn-icon-videos" })</li>*@
+
+                        </ul>
+                    </div>
+                </nav>
+            </li>
+            <li style="float:left !important;width:300px;">
+                <span style="text-align: center; color: #008955;text-shadow: #008955 2px 2px 5px;font-size: 17px;font-family: tarroma;">
+                BEM VINDO A DEKRA </span><span style="color: green; width: 448px; margin-left: 201px; float: left; margin-top: -59px;  cursor: pointer;"> AUTOMATIZAÇÃO DE VULNERABILIDADE </span>
+            </li>
+            @*<li style="float: left;background-color: white;cursor: pointer;width: 10%;">
+                <span id="LogIn" style="color: #008955">SISTEMAS DEKRA</span>
+            </li>
+            <li style="float: left;background-color: white;cursor: pointer;width: 13%;">
+                <span id="Acess" style="color: #008955">SOLICITAÇÃO DE ACCESS</span>
+            </li>
+            <li style="float: left;background-color: white;cursor: pointer;width: 10%;">
+                <span id="LogIn" style="color: #008955">INTEGRAÇÕES</span>
+            </li>
+            <li style="float: left;background-color: white;cursor: pointer;width: 10%;">
+                <span id="LogIn" style="color: #008955">BRANCHS</span>
+            </li>
+            <li style="float: left;background-color: white;cursor: pointer;width: 10%;">
+                <span id="LogIn" style="color: #008955">DEKRA ATENDE</span>
+            </li>
+            <li style="float: left;background-color: white;cursor: pointer;width: 153px;">
+                <span id="LogIn" style="color: #008955">HELP CODE</span>
+            </li>
+            <li style="float: left;background-color: white;cursor: pointer;width: 8%;">
+                <span id="LogIn" data-toggle="modal" data-target="#myModal" style="color: #008955">LOG IN</span>               
+            </li>*@
+        </ul>
+
+        @*<header>*@
+        @*<div class="container body-content" style="background:url('../../img/Backgrounds/download (3).jfif');background-repeat: no-repeat; background-size: cover;">*@
+        <div ng-app="App" style="background-color: white; width: 1310px !important; height: 650px; float: left;  margin: -66px 0px 0px -361px;z-index:1;">
+            @RenderBody()
+        </div>
+
+        @*<footer>
+            <p>&copy; @DateTime.Now.Year - DEKRA SOLUÇÕES EM SEGURANÇA - NÃO INOVAMOS APENAS, EVOLUIMOS</p>
+            
+        </footer>*@
+        @*</div>*@
+        @*</header>*@
+
+        @*<script src="js/classie.js"></script>
+            <script src="js/gnmenu.js"></script>*@
+        <script>
+            new gnMenu(document.getElementById('gn-menu'));
+        </script>
+        
+        @*MODALS*@
+        <div ng-model="LoginModel"id="myModal" class="modal fade" role="dialog">
+            <div ng-app="App" class="modal-dialog" style="width:600px;height:800px;">
+                @*<div style="background-color:whitesmoke;width:100%;height:537px;border-radius:12px;">*@
+                @{
+                    Html.RenderAction("Log", "Home");
+                }
+                @*</div>*@
+                <!-- Modal content-->
+                @*<div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal">Close</button>
+                </div>
+            </div>*@
+                <div class="modal-footer" style="    float: left; width: 100%; margin-top: 505px;">
+                    <button type="button" style="border-radius:15px; background-color: #ffffff; border: none; color: white; padding: 1px 55px; text-align: center;  text-decoration: none;  display: inline-block;  font-size: 19px;
+                            margin: -8px -34px; color:#008955;  cursor: pointer;" data-dismiss="modal">
+                        <span style="float: left;text-align: center; font-size: 15px; font-weight: bold; font-family: tarroma;">SAIR</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        @*@Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("Scripts", required: false)*@
+    </div>
+</body>
+
+</html>
+

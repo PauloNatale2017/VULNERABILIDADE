@@ -1,0 +1,164 @@
+﻿
+@{
+    Layout = null;
+}
+
+@Scripts.Render("~/ScriptsAngular/js")
+@Scripts.Render("~/LayoutPackages/js")
+
+@Styles.Render("~/ContentAngular/css")
+@Styles.Render("~/LayoutPackages/css")
+
+@*background:url(../../images/Backgrounds/2.jpg);background-repeat: no-repeat;*@
+
+<link href="~/Content/style.css" rel="stylesheet" />
+<script src="~/LayoutPackages/Login/js/FirsAccess.js"></script>
+@*<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LogIn2</title>
+</head>
+<body ng-app="App" ng-controller="CtrlLogin" style=" float:left;width:100%;height:800px;background-color:white;">
+    <div style="float:left;width:100%;height:850px;background-color:whitesmoke;display:inline-flex;">
+        @*<div style="float:left;width:70%;height:425px;background-color:transparent;display:inline-block">
+            <div style="float:left;width:100%;height:245px;background-color:green;"></div>
+            <div style="float:left;width:100%;height:365px;background-color:darkgray;"></div>
+            <div style="float:left;width:100%;height:245px;background-color:yellowgreen;"></div>
+        </div>       
+        
+        <div style="float:left;width:30%;height:850px;background-color:yellow;display:inline-block">
+            <div style="float:left;width:100%;height:245px;background-color:transparent;"></div>
+            <div style="float:left;width:100%;height:365px;background-color:cornflowerblue;">
+                <div style="float:left;" class="btn-group" style="text-align:center;">
+                    <span style="float:left;">USUARIO</span><br />
+                    <input style="float:left;" class="btn" type="text" name="name" value=" " /><br />
+                    <span style="float:left;">PASSWORD</span><br />
+                    <input style="float:left;" class="btn" type="password" name="name" value=" " /><br />
+                    <input style="float:left;" class="btn" type="button" name="name" value="login" />
+                    <input style="float:left;" class="btn" type="button" name="name" value="Cadastro" />
+                </div>
+            </div>
+            <div style="float:left;width:100%;height:245px;background-color:transparent;"></div>
+        </div>       
+
+        @*<div style="float:left;width:30%;height:850px;background-color:yellow;"></div>
+    </div>
+</body>
+</html>*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DEKRA T.I</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/LayoutPackages/Login/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/LayoutPackages/Login/vendor/bootstrap/css/bootstrap.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/LayoutPackages/Login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->  
+    <link rel="stylesheet" type="text/css" href="~/LayoutPackages/Login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/LayoutPackages/Login/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/LayoutPackages/Login/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/LayoutPackages/Login/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/LayoutPackages/Login/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/LayoutPackages/Login/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/LayoutPackages/Login/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/LayoutPackages/Login/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body ng-app="App" ng-controller="CtrlLogon">
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form">
+
+                    @*<img src="~/images/Icons/DEKRA/images.png" alt="Alternate Text" />
+                    <img src="~/images/Icons/DEKRA/images (1).png" alt="Alternate Text" />
+                    <img src="~/images/Icons/DEKRA/images (2).png" alt="Alternate Text" />
+                    <img src="~/images/Icons/DEKRA/images (3).png" alt="Alternate Text" />*@
+                    <img src="~/images/Icons/DEKRA/images (4).png" alt="Alternate Text" />
+                    @*<img src="~/images/Icons/DEKRA/images (5).png" alt="Alternate Text" />*@
+
+                    <span class="login100-form-title p-b-34">
+                        - SOLUÇÕES INTELIGENTES -
+                    </span>
+
+                    <div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type user name">
+                        <input ng-model="Logon.User" id="first-name" class="input100" type="text" name="Email" placeholder="User name or email">
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20" data-validate="Type password">
+                        <input ng-model="Logon.Password" class="input100" type="password" name="Password" placeholder="Password">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" ng-click="Login()">
+                            SIGN IN @*{{todoList}}*@
+                        </button>
+                    </div>
+
+                    <div class="w-full text-center p-t-27 p-b-239">
+                        <span class="txt1">
+                            FORGOT
+                        </span>
+
+                        <a href="#" class="txt2">
+                            USER NAME / PASSWORD?
+                        </a>
+                    </div>
+
+                    <div class="w-full text-center">
+                        <a href="#" class="txt3">
+                            SIGN UP
+                        </a>
+                    </div>
+                </form>
+
+                <div class="login100-more" style="background-image: url('../../LayoutPackages/Login/images/bg-01.jpg');"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="dropDownSelect1"></div>
+
+    <!--===============================================================================================-->
+    <script src="~/LayoutPackages/Login/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/LayoutPackages/Login/vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/LayoutPackages/Login/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/LayoutPackages/Login/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+    </script>
+    <!--===============================================================================================-->
+    <script src="~/LayoutPackages/Login/vendor/daterangepicker/moment.min.js"></script>
+    <script src="~/LayoutPackages/Login/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/LayoutPackages/Login/vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/LayoutPackages/Login/js/main.js"></script>
+
+</body>
+</html>
+

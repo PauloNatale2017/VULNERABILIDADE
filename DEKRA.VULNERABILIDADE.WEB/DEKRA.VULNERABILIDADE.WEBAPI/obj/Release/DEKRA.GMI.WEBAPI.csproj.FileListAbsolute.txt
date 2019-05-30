@@ -1,0 +1,4 @@
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.WEBAPI\bin\Release\DEKRA.GMI.WEBAPI.dll
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.WEBAPI\bin\Release\DEKRA.GMI.WEBAPI.pdb
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.WEBAPI\obj\Release\DEKRA.GMI.WEBAPI.dll
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.WEBAPI\obj\Release\DEKRA.GMI.WEBAPI.pdb

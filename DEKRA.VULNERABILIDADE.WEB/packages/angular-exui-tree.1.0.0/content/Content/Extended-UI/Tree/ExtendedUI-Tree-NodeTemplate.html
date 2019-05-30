@@ -1,0 +1,33 @@
+﻿<div class="exui-tree-node">
+    <div>
+        <div class="exui-tree-node-icon"
+             ng-class="!nodeData.isLeaf ? (nodeData.isExtended ? 'exui-tree-node-icon-extended' : 'exui-tree-node-icon-collapsed') : ''"
+             ng-click="events.onIconClick()"
+             ng-hide="nodeData.isLeaf">
+            <img alt="正在加载......"
+                 src="{{__loadingImageUri}}"
+                 ng-show="nodeData.inLoading" />
+        </div>
+        <div class="exui-tree-node-icon"
+             ng-show="nodeData.showCheckBox">
+            <input type="checkbox"
+                   ng-checked="nodeData.isChecked" />
+        </div>
+        <div class="exui-tree-node-icon"
+             ng-show="nodeData.showIcon">
+            <img alt="{{nodeData.text}}"
+                 ng-src="nodeData.iconUri" />
+        </div>
+        <div class="exui-tree-node-text" data-bind-exui-treenode-value="{{nodeData.value}}"
+             ng-class="nodeData.isSelected ? 'exui-tree-node-selected text-danger' : ''"
+             ng-click="events.onSelected()">
+            {{nodeData.text}}
+        </div>
+    </div>
+    <div ng-show="nodeData.isExtended">
+        <div></div>
+        <div>
+            <exui-tree-node ng-repeat="item in nodeData.childNodes" node-data="item"></exui-tree-node>
+        </div>
+    </div>
+</div>

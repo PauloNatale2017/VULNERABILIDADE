@@ -1,0 +1,70 @@
+﻿@{
+    Layout = "";
+}
+<!doctype html>
+<html ng-app="app">
+
+<head>
+   
+    @Scripts.Render("~/Scripts/UiTreeView/js") 
+    @Styles.Render("~/Scripts/UiTreeView/css") 
+
+    @*<script src="~/ScriptsAngular/angular.js"></script>*@
+      <link href="~/Content/ui-grid.min.css" rel="stylesheet" />
+    @*<script src="~/ContentAngular/ui-grid.min-4.0.2.js"></script>*@
+
+    <style type="text/css">
+        .ui-grid-row .ui-grid-cell {
+   background-color: inherit !important;
+   color: inherit !important;
+}
+        .ui-grid-row .ui-grid-cell.ui-grid-cell {
+    background-color: #f0f0ee;
+    border-bottom: solid 1px #d4d4d4;
+}
+        .rowLevel-0{
+  background-color: #254158;
+  color: white;
+}
+        .rowLevel-1{
+  background-color: #3F6F96;
+  color: white;
+}
+        .rowLevel-2{
+  background-color: #5289B6;
+}
+        .nivelGrirowLevellla-3{
+  background-color: #7AA5C7;
+}
+        .rowLevel-4{
+  background-color: #A4C1D9;
+  color: black;
+}
+        .rowLevel-5{
+  background-color: #D5E2EE;
+  color: black;
+}
+        .ui-grid-row .ui-grid-cell.ui-grid-cell 
+        {          
+            height: 39px !important;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div ng-controller="MainCtrl" style="width:100%;height:850px;">
+        <br>
+        <div ui-grid="gridOptions2" ui-grid-tree-view class="grid" style="width:100%;height:850px;">
+        </div>
+    </div>
+    
+    <script src="~/js/app.js"></script>
+</body>
+</html>
+
+
+
+
+

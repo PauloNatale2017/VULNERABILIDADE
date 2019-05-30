@@ -1,0 +1,101 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Scripts.Render("~/ScriptsAngular/js")
+@Scripts.Render("~/LayoutPackages/js")
+
+@Styles.Render("~/ContentAngular/css")
+@Styles.Render("~/LayoutPackages/css")
+
+<link href="~/Content/angular-block-ui.css" rel="stylesheet" />
+<link href="~/Content/ui-grid.css" rel="stylesheet" />
+
+<script src="~/Scripts/fusioncharts.js"></script>
+<script src="~/Scripts/fusioncharts.theme.fusion.js"></script>
+
+<link href="~/js/TreeView/ivh-treeview-theme-basic.css" rel="stylesheet" />
+<link href="~/js/TreeView/ivh-treeview.css" rel="stylesheet" />
+<link href="~/js/TreeView/ivh-treeview.min.css" rel="stylesheet" />
+<script src="~/js/TreeView/ivh-treeview.js"></script>
+<script src="~/js/TreeView/ivh-treeview.min.js"></script>
+
+
+<script src="~/js/TreeView/ui.grid.core.min.js"></script>
+<script src="~/js/TreeView/ui-grid.tree-base.min.js"></script>
+<script src="~/js/TreeView/ui-grid.tree-view.min.js"></script>
+<script src="~/js/TreeView/ui-grid.selection.min.js"></script>
+<script src="~/js/TreeView/ui-grid.cellnav.min.js"></script>
+
+<link rel="stylesheet" href="http://ui-grid.info/release/ui-grid.css" type="text/css">
+
+<style type="text/css">
+    .container {
+    max-width: 1209px !important;
+    margin: -31px 212px auto !important;
+    padding: 80px 0 !important;
+    height: 825px !important;
+    text-align: center !important;
+    
+}
+    .grid {
+  width: 500px;
+  height: 150px;
+}
+</style>
+
+
+<div class="container" ng-controller="CtrlVulnerabilidade" style="background-color:whitesmoke;width:100%;height:700px;float:left;display:inline-block;margin-left: 45px;display:inline-block;">
+    <div style="float: left; width: 100%; height: 91px; margin-top: 89px; background-color: white;">
+        <div class="form-group">
+            <div class="row">
+                <input ng-model="btnTeste" ng-click="btnTesteParametrizado()" type="button" name="name" value="EXECUTAR TESTE EM ARQUIVOS SELECIONADOS" class="btn btn-success" style="float: left; margin-top: 8px; margin-left: 22px;" />
+                <input ng-model="btnEstatistica" ng-click="btnDiretorio()" type="button" name="name" value="GERAR EXCEL" class="btn btn-default" style="float: left; margin-top: 8px; margin-left: 22px;" />
+                <input ng-model="btnLogsErro" ng-click="btnDiretorio()" type="button" name="name" value="ESTATISTICA" class="btn btn-default" style="float: left; margin-top: 8px; margin-left: 22px;" />
+                <input ng-model="btnLogsErro" ng-click="btnDiretorio()" type="button" name="name" value="LOGS DE ALTERAÇÃO" class="btn btn-default" style="float: left; margin-top: 8px; margin-left: 22px;" />
+                <input ng-model="btnLogsErro" ng-click="btnDiretorio()" type="button" name="name" value="ERROS MAPEADOS" class="btn btn-default" style="float: left; margin-top: 8px; margin-left: 22px;" />
+                <span class="badge" style="float: left;margin-left: -11px;background-color:red;">5</span>
+                <input ng-model="btnLogsErro" ng-click="btnDiretorio()" type="button" name="name" value="{{DIRETORIO}}" class="btn btn-default" style="float: left; margin-top: 8px; margin-left: 22px;" />
+            </div>
+            <div class="row">
+                <input ng-model="btnDiretorio" ng-click="btnDiretorio()" type="button" name="name" value="BUSCAR DIRETORIOS" class="btn btn-info" style="float: left; margin-top: 8px; margin-left: 22px;" />
+                <select ng-model="Vulnerabilidade.path" style="float: left;margin-top: 7px;height: 36px;border-radius: 6px;width: 85%;margin-left: 2px;">
+                    <option ng-repeat="x in names" value="{{x.name}}">{{x.name}}</option>
+                </select>
+            </div>
+            <div class="row" style="height: 25px; margin: 0% 0% 0% 0%; background: white; font-weight: bold !important;  font-size: 17px;">
+                <div class="col-xs-2" style="color: black; font-weight: bold;">
+                    <span>.cshtml <span id="cshtml" class="badge">{{cshtml}}</span></span>
+                    @*<input type="checkbox" name="name" value=".cshtml" />*@
+                </div>
+                <div class="col-xs-2" style="color: black; font-weight: bold;">
+                    <span>.html <span id="html" class="badge">{{html}}</span></span>
+                    @*<input type="radio" name="name" value=".html" />*@
+                </div>
+                <div class="col-xs-2" style="color: black; font-weight: bold;">
+                    <span>.aspx <span id="aspx" class="badge">{{aspx}}</span></span>
+                    @*<input type="radio" name="name" value=".aspx" />*@
+                </div>
+                <div class="col-xs-2" style="color: black; font-weight: bold;">
+                    <span>.asp <span id="asp" class="badge">{{asp}}</span></span>
+                    @*<input type="radio" name="name" value=".asp" />*@
+                </div>
+                <div class="col-xs-2" style="color: black; font-weight: bold;">
+                    <span>.htm <span id="htm" class="badge">{{htm}}</span></span>
+                    @*<input type="radio" name="name" value=".htm" />*@
+                </div>
+                <div class="col-xs-2" style="color: black; font-weight: bold;">
+                    <span>Totalizados <span id="outros" class="badge">{{outros}}</span></span>
+                    @*<input type="radio" name="name" value=".htm" />*@
+                </div>
+            </div>
+            <div class="row" style="margin: 0% 0% 0% 0%; width: 100%;">
+                <div id="grid1" ui-grid="gridOptions" ui-grid-selection ui-grid-tree-view class="grid" style="width:99% !important; height: 400px !important; float: left;color:black !important;"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="~/js/Vulnerabilidade.js"></script>

@@ -1,0 +1,14 @@
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.DATAACCESLAYER\bin\Debug\DEKRA.GMI.DATAACCESLAYER.dll.config
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.DATAACCESLAYER\bin\Debug\DEKRA.GMI.DATAACCESLAYER.dll
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.DATAACCESLAYER\bin\Debug\DEKRA.GMI.DATAACCESLAYER.pdb
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.DATAACCESLAYER\bin\Debug\DEKRA.GMI.DOMAIN.dll
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.DATAACCESLAYER\bin\Debug\EntityFramework.dll
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.DATAACCESLAYER\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.DATAACCESLAYER\bin\Debug\MongoDB.Bson.dll
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.DATAACCESLAYER\bin\Debug\DEKRA.GMI.DOMAIN.pdb
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.DATAACCESLAYER\bin\Debug\EntityFramework.xml
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.DATAACCESLAYER\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.DATAACCESLAYER\bin\Debug\MongoDB.Bson.xml
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.DATAACCESLAYER\obj\Debug\DEKRA.GMI.DATAACCESLAYER.csprojResolveAssemblyReference.cache
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.DATAACCESLAYER\obj\Debug\DEKRA.GMI.DATAACCESLAYER.dll
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.DATAACCESLAYER\obj\Debug\DEKRA.GMI.DATAACCESLAYER.pdb

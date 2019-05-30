@@ -1,0 +1,436 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Scripts.Render("~/ScriptsAngular/js")
+@Scripts.Render("~/LayoutPackages/js")
+
+@Styles.Render("~/ContentAngular/css")
+@Styles.Render("~/LayoutPackages/css")
+
+<link href="~/Content/angular-block-ui.css" rel="stylesheet" />
+<link href="~/Content/ui-grid.css" rel="stylesheet" />
+
+@*<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>*@
+@*<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>*@
+
+<script src="~/Scripts/fusioncharts.js"></script>
+<script src="~/Scripts/fusioncharts.theme.fusion.js"></script>
+
+<style type="text/css">
+    .container {
+    max-width: 1209px !important;
+    margin: -31px 212px auto !important;
+    padding: 80px 0 !important;
+    height: 825px !important;
+    text-align: center !important;
+    
+}
+    .grid {
+  width: 500px;
+  height: 150px;
+}
+</style>
+
+
+<div class="container" ng-controller="CtrlLayout2" style="background-color:whitesmoke;width:100%;height:700px;float:left;display:inline-block;margin-left: 45px;display:inline-block;">
+       
+    @*<div style="float: left; width: 100%; height: 200px; background-color: #BBDEB1; margin-top: 35px; margin-left: 0px;display:inline-flex;">
+      
+         <div style="width:30%;background-color:white;height:200px;">
+               <div style="width:100%;background-color:white;height:100px;display:inline-flex;">
+                   <div style="width:100%;background-color:white;height:100px;display:inline-flex;">
+
+                       <style type="text/css">
+
+                           .Sistemas{
+                                float: left;
+                                 float: left;
+                                 width: 60px;
+                                 height: 60px;
+                                 margin-left: 13px;
+                                 background-color: blue;
+                                 background:url(../../images/Icons/Testes/Sistema1.png);
+                                 background-repeat: no-repeat;
+                                 background-size: 100% 100%;
+                                 cursor: pointer;
+                                     border-radius: 34px;
+                                 margin-top: 24px;
+                                 /*box-shadow: black 1px 1px 6px;*/
+                           }
+                           .Sistemas:hover{
+                                float: left;
+                                 float: left;
+                                 width: 80px;
+                                 height: 80px;
+                                 margin-left: 13px;
+                                 background-color: blue;
+                                 background:url(../../images/Icons/Testes/Sistema1.png);
+                                 background-repeat: no-repeat;
+                                 background-size: 100% 100%;
+                                 cursor: pointer;
+                                     border-radius: 34px;
+                                 margin-top: 9px;
+                                 /*box-shadow: black 1px 1px 6px;*/
+                           }
+
+                           .Bancos{
+                                float: left;
+                                 float: left;
+                                 width: 60px;
+                                 height: 60px;
+                                     border-radius: 34px;
+                                 margin-left: 13px;
+                                 background-color: blue;
+                                  background:url(../../images/Icons/Testes/Banco.png);
+                                 background-repeat: no-repeat;
+                                 background-size: 100% 100%;
+                                 cursor: pointer;
+                                 margin-top: 24px;
+                                 /*box-shadow: black 1px 1px 6px;*/
+                           }
+                           .Bancos:hover{
+                                float: left;
+                                 float: left;
+                                 width: 80px;
+                                 height: 80px;
+                                     border-radius: 34px;
+                                 margin-left: 13px;
+                                 background-color: blue;
+                                   background:url(../../images/Icons/Testes/Banco.png);
+                                 background-repeat: no-repeat;
+                                 background-size: 100% 100%;
+                                 cursor: pointer;
+                                 margin-top: 9px;
+                                 /*box-shadow: black 1px 1px 6px;*/
+                           }
+
+                           .Metodos{
+                                float: left;
+                                 float: left;
+                                 width: 60px;
+                                 height: 60px;
+                                     border-radius: 34px;
+                                 margin-left: 13px;
+                                 background-color: blue;
+                                  background:url(../../images/Icons/Testes/ana1.png);
+                                 background-repeat: no-repeat;
+                                 background-size: 100% 100%;
+                                 cursor: pointer;
+                                 margin-top: 24px;
+                                 /*box-shadow: black 1px 1px 6px;*/
+                           }
+                           .Metodos:hover{
+                                float: left;
+                                 float: left;
+                                 width: 80px;
+                                     border-radius: 34px;
+                                 height: 80px;
+                                 margin-left: 13px;
+                                 background-color: blue;
+                                   background:url(../../images/Icons/Testes/ana1.png);
+                                 background-repeat: no-repeat;
+                                 background-size: 100% 100%;
+                                 cursor: pointer;
+                                 margin-top: 9px;
+                                 /*box-shadow: black 1px 1px 6px;*/
+                           }
+
+                           .Teste{
+                                float: left;
+                                 float: left;
+                                 width: 60px;
+                                 height: 60px;
+                                     border-radius: 34px;
+                                 margin-left: 13px;
+                                 background-color: blue;
+                              background:url(../../images/Icons/Testes/teste2.jfif);
+                                 background-repeat: no-repeat;
+                                 background-size: 100% 100%;
+                                 cursor: pointer;
+                                 margin-top: 24px;
+                                 /*box-shadow: black 1px 1px 6px;*/
+                           }
+                           .Teste:hover{
+                                float: left;
+                                 float: left;
+                                 width: 80px;
+                                 height: 80px;
+                                     border-radius: 34px;
+                                 margin-left: 13px;
+                                 background-color: blue;
+                                background:url(../../images/Icons/Testes/teste2.jfif);
+                                 background-repeat: no-repeat;
+                                 background-size: 100% 100%;
+                                 cursor: pointer;
+                                 margin-top: 9px;
+                                 /*box-shadow: black 1px 1px 6px;*/
+                           }
+
+                           .Brasil{
+                                   float: left;
+                                   width: 50px;
+                                   height: 50px;
+                                   margin-left: 5px;
+                                   background-color: blue;
+                                   background: url(../../images/Icons/Pais/Brazil.jfif);
+                                   background-repeat: no-repeat;
+                                   background-size: 100% 100%;
+                                   cursor: pointer;
+                                   border-radius: 57px;
+                                   margin-top: 9px;
+                                   /*box-shadow: black 1px 1px 6px;*/
+                                  }
+                           .Alemanha{
+                                   float: left;
+                                   width: 50px;
+                                   height: 50px;
+                                   margin-left: 5px;
+                                   background-color: blue;
+                                   background:url(../../images/Icons/Pais/Alemanha.jfif);
+                                   background-repeat: no-repeat;
+                                   background-size: 100% 100%;
+                                   cursor: pointer;
+                                   border-radius: 57px;
+                                   margin-top: 9px;
+                                   /*box-shadow: black 1px 1px 6px;*/
+                                  }
+                           .Usa{
+                                   float: left;
+                                   width: 50px;
+                                   height: 50px;
+                                   margin-left: 5px;
+                                   background-color: blue;
+                                  background:url(../../images/Icons/Pais/Usa.jfif);
+                                   background-repeat: no-repeat;
+                                   background-size: 100% 100%;
+                                   cursor: pointer;
+                                   border-radius: 57px;
+                                   margin-top: 9px;
+                                   /*box-shadow: black 1px 1px 6px;*/
+                                  }
+                           .Africa{
+                                   float: left;
+                                   width: 50px;
+                                   height: 50px;
+                                   margin-left: 5px;
+                                   background-color: blue;
+                                   background:url(../../images/Icons/Pais/Africa.jfif);
+                                   background-repeat: no-repeat;
+                                   background-size: 100% 100%;
+                                   cursor: pointer;
+                                   border-radius: 57px;
+                                   margin-top: 9px;
+                                   /*box-shadow: black 1px 1px 6px;*/
+                                  }
+
+                       </style>
+
+         
+                       <div ng-click="SistemasModel()" data-toggle="modal"  data-target="#Sistemas" class="Sistemas"></div>
+              
+                       <div ng-click="SistemasModel1()" data-toggle="modal"   data-target="#Bancos" class="Bancos"></div>
+                 
+                       <div ng-click="SistemasModel2()" data-toggle="modal"   data-target="#MetodosFuncoes" class="Metodos"></div>
+                  
+                       <div ng-click="InicializaTeste()" data-toggle="modal tooltip" title="INICIALIZAÇÃO DOS TESTES AUTOMATIZADOS" class="Teste"></div>
+                         
+                   </div>
+                   <div style="width:100%;background-color:white;height:100px;display:inline-flex;">
+                       @*<div id="Chart1" style="float: left;background-color: white; "></div>
+                  </div>
+               </div>         
+               <div style="width:100%;background-color:white;height:95px;display:inline-flex;">
+                   <div class="Brasil">
+                   </div>
+                   <div class="Alemanha">
+                   </div>
+                   <div class="Usa">
+                   </div>
+                   <div class="Africa">
+                   </div>
+                 
+                   <div style="float: left; width: 90px;  height: 83px; margin-left: 5px;  background-color: white;  margin-top: 9px; display: inline-table;">
+                       <div style="float:left;margin-top:5px;">
+                     
+                       </div>                    
+                   </div>
+                
+               </div>
+        </div>
+        
+        <div style="width:70%;background-color:white;height:200px;display:inline-flex">         
+            
+            @*<div id="ChartGraficoIdentificacao" style="float: left; margin-left: 0px; width: 100%; margin-top: -23px; height: 344px; background-color: white; "></div>
+
+            <div id="chart-container"></div>  
+
+            <div style="float: left;width: 150px; height: 25px; background-color: whitesmoke; margin-top: 147px; z-index: 999; margin-left: -975px; border-radius: 10px; color: #afd249; font-size: 13px; font-style: oblique; font-family: fantasy;">
+                <span style="width: 154px;float: left;height: 25px;text-align: center;font-size: 17px;  margin-top: 1px;">CLASSIFICAÇÃO</span> 
+                <div style="float:left;
+                                 width:25px;
+                                 height:25px;
+                                 background:url(../../images/Icons/Diversos/e4.jpg);
+                                 background-repeat: no-repeat;
+                                 background-size: 100% 100%;">
+                </div>
+                <div style="float:left;
+                                 width:25px;
+                                 height:25px;
+                                 background:url(../../images/Icons/Diversos/e4.jpg);
+                                 background-repeat: no-repeat;
+                                 background-size: 100% 100%;">
+                </div>
+                <div style="float:left;
+                                 width:25px;
+                                 height:25px;
+                                 background:url(../../images/Icons/Diversos/e4.jpg);
+                                 background-repeat: no-repeat;
+                                 background-size: 100% 100%;">
+                </div>
+                <div style="float:left;
+                                 width:25px;
+                                 height:25px;
+                                 background:url(../../images/Icons/Diversos/e4.jpg);
+                                 background-repeat: no-repeat;
+                                 background-size: 100% 100%;">
+                </div>
+                <div style="float:left;
+                                 width:25px;
+                                 height:25px;
+                                 background:url(../../images/Icons/Diversos/e4.jpg);
+                                 background-repeat: no-repeat;
+                                 background-size: 100% 100%;">
+                </div>
+                <div style="float:left;
+                                 width:25px;
+                                 height:25px;
+                                 background:url(../../images/Icons/Diversos/e4.jpg);
+                                 background-repeat: no-repeat;
+                                 background-size: 100% 100%;">
+                </div>
+            </div>       
+        </div>
+
+   </div>
+
+    <div style="float: left; width: 100%; height: 200px; background-color: white; margin-top: 14px; margin-left: 0px;display:inline-flex;">
+       
+    
+    </div>
+
+    <div style="float: left; width: 100%; height: 200px; background-color: white; margin-top: 14px; margin-left: 0px;display:inline-flex;">
+      
+    
+    </div>
+
+    <div style="float: left; width: 100%; height: 200px; background-color: white; margin-top: 14px; margin-left: 0px;display:inline-flex;">
+   
+     </div>
+
+</div>
+
+
+<div ng-controller="CtrlLayout2 as $ctrl">
+    <!-- Modal -->
+    <div id="Sistemas" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content" style="float: left; margin-left: -150px; width: 878px; height: 733px;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color:black"> -- SISTEMAS DEKRA -- </h4>
+                </div>
+                <div class="modal-body" style="position: relative !important; padding: 20px !important; color: black !important; height: 567px !important;">
+                    <p>OPÇÕES DE SISTEMAS</p>
+
+                    <div>
+                        <div id="grid1"
+                             ui-grid="$ctrl.gridSistemas"
+                             ui-grid-edit
+                             ui-grid-selection 
+                             ui-grid-cellnav
+                             class="grid" style="float:left;width: 836px;height: 473px;"></div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Bancos" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content" style="float: left; margin-left: -150px; width: 878px; height: 733px;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color:black">SISTEMAS DEKRA</h4>
+                </div>
+                <div class="modal-body" style="position: relative !important; padding: 20px !important; color: black !important; height: 567px !important;">
+                    <p>OPÇÕES DE SISTEMAS</p>
+
+                    <div>
+                        <div id="grid2"
+                             ui-grid="$ctrl.gridBases"
+                             ui-grid-edit                            
+                             ui-grid-selection
+                             ui-grid-cellnav
+                             class="grid"
+                             style="float:left;width: 836px;height: 473px;"></div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="MetodosFuncoes" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content" style="float: left; margin-left: -150px; width: 878px; height: 733px;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color:black"> -- SELECIONE UM TESTE AUTOMATIZADO -- </h4>
+                </div>
+                <div class="modal-body" style="position: relative !important; padding: 20px !important; color: black !important; height: 567px !important;">
+                    <p>OPÇÕES DE SISTEMAS</p>
+
+                    <div>
+                        <div id="grid2"
+                             ui-grid="$ctrl.gridFuncoes"
+                             ui-grid-edit                            
+                             ui-grid-selection
+                             ui-grid-cellnav
+                             class="grid"
+                             style="float:left;width: 836px;height: 473px;"></div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>*@
+</div>
+
+<script src="~/js/RoboTesteMenu.js"></script>

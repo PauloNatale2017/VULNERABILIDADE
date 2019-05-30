@@ -1,0 +1,65 @@
+﻿
+@{
+    Layout = "";
+}
+
+
+
+@Styles.Render("~/LayoutPackages/css")
+@Scripts.Render("~/LayoutPackages/js")
+
+
+<link href="~/Content/style.css" rel="stylesheet" />
+
+
+<style>
+    .bg-bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -108px !important;
+    margin-left: -270px;
+    width: 956px;
+    height: 100%;
+    z-index: 1;
+}
+    .container h1 {
+          float: left !important;
+          width: 800px;
+    }
+</style>
+
+ @*background-color: #008955 !important;*@
+
+@*class="wrapper"*@
+
+<div  style=" float: left;
+    margin-top: 143px;
+    margin-left: -157px;">
+    @*<div class="container">*@
+    <div >
+        <h1>{{MENSAGEM}}</h1>
+
+        <form class="form" style="color:black !important">
+            <input ng-model="Username" type="text" placeholder="Username" style="color: black;font-size: 20px; font-weight: bold;">
+            <input ng-model="Password" type="password" placeholder="Password" style="color: black;font-size: 20px;font-weight: bold;">
+            <button ng-click="LoginForm()" type="button" id="login-button">Login</button>
+        </form>
+    </div>
+
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+<script src="~/ScriptsAngular/index.js"></script>

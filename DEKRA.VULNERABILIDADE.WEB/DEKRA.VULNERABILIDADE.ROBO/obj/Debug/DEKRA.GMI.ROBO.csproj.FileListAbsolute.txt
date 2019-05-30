@@ -1,0 +1,13 @@
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.ROBO\bin\Debug\DEKRA.GMI.ROBO.dll
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.ROBO\bin\Debug\DEKRA.GMI.ROBO.pdb
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.ROBO\bin\Debug\Selenium.WebDriverBackedSelenium.dll
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.ROBO\bin\Debug\ThoughtWorks.Selenium.Core.dll
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.ROBO\bin\Debug\WebDriver.dll
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.ROBO\bin\Debug\WebDriver.Support.dll
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.ROBO\bin\Debug\Selenium.WebDriverBackedSelenium.xml
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.ROBO\bin\Debug\ThoughtWorks.Selenium.Core.xml
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.ROBO\bin\Debug\WebDriver.xml
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.ROBO\bin\Debug\WebDriver.Support.xml
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.ROBO\obj\Debug\DEKRA.GMI.ROBO.dll
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.ROBO\obj\Debug\DEKRA.GMI.ROBO.pdb
+C:\Users\paulo.natale\Documents\Visual Studio 2013\Projects\DEKRA.GMI.WEB\DEKRA.GMI.ROBO\obj\Debug\DEKRA.GMI.ROBO.csprojResolveAssemblyReference.cache
